@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  get 'posts/index'
+
+  get 'posts/show'
+
+  resources :posts
+
+	#Casein routes
+	namespace :casein do
+		resources :posts
+	end
+
   #get 'static_pages/index'
 
   #get 'static_pages/about'
